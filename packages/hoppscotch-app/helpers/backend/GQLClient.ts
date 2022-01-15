@@ -44,8 +44,8 @@ import {
 
 const BACKEND_GQL_URL =
   process.env.context === "production"
-    ? "https://api.hoppscotch.io/graphql"
-    : "https://api.hoppscotch.io/graphql"
+    ? "https://ups-apipg.netlify.app/graphql"
+    : "https://ups-apipg.netlify.app/graphql"
 
 const storage = makeDefaultStorage({
   idbName: "hoppcache-v1",
@@ -54,8 +54,8 @@ const storage = makeDefaultStorage({
 
 const subscriptionClient = new SubscriptionClient(
   process.env.context === "production"
-    ? "wss://api.hoppscotch.io/graphql"
-    : "wss://api.hoppscotch.io/graphql",
+    ? "wss://ups-apipg.netlify.app/graphql"
+    : "wss://ups-apipg.netlify.app/graphql",
   {
     reconnect: true,
     connectionParams: () => {
